@@ -60,6 +60,7 @@ def scrape_bilietai_lt_api(max_pages: int = 6) -> pd.DataFrame:
                 ("language", "en"),
                 ("statuses", "ON_SALE"),
                 ("statuses", "SALE_STOPPED"),
+                ("statuses", "FREE_ADMISSION"),
                 ("sortBy", "date"),
                 ("sortOrder", "ASC"),
                 ("pageSize", "36"),
