@@ -224,6 +224,9 @@ def scrape_siauliuarena() -> pd.DataFrame:
         return unicodedata.normalize("NFC", text)
 
     resp = requests.get(list_url, headers=headers, timeout=30)
+    print(resp.status_code)
+    print(resp.headers.get("content-type"))
+    print(resp.text[:500])
     resp.raise_for_status()
 
     html = resp.content.decode("utf-8", errors="replace")
